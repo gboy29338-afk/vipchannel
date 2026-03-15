@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colour Trading - Win Big</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#000,#111,#000);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+@keyframes glow {
+0%{box-shadow:0 0 10px gold;}
+50%{box-shadow:0 0 25px gold;}
+100%{box-shadow:0 0 10px gold;}
+}
+
+header{
+padding:20px;
+font-size:28px;
+font-weight:bold;
+color:gold;
+letter-spacing:2px;
+}
+
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:45px;
+color:gold;
+text-shadow:0 0 20px gold;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+color:#ddd;
+}
+
+.bonus{
+margin-top:25px;
+background:linear-gradient(45deg,#ffd700,#ffae00);
+color:black;
+padding:12px;
+font-weight:bold;
+border-radius:10px;
+display:inline-block;
+animation:glow 2s infinite;
+}
+
+.btn{
+margin-top:20px;
+display:inline-block;
+padding:15px 35px;
+font-size:18px;
+border-radius:40px;
+background:gold;
+color:black;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:white;
+}
+
+.telegram-btn{
+margin-top:20px;
+display:inline-block;
+padding:15px 35px;
+font-size:18px;
+border-radius:40px;
+background:#0088cc;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.telegram-btn:hover{
+transform:scale(1.1);
+background:#00aaff;
+}
+
+.popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#111;
+border:1px solid gold;
+padding:12px 18px;
+border-radius:10px;
+font-size:14px;
+color:#fff;
+animation:glow 3s infinite;
+}
+
+footer{
+margin-top:100px;
+padding:20px;
+font-size:14px;
+color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+👑 COLOUR TRADING
+</header>
+
+<div class="hero">
+
+<h1>Play & Win Daily</h1>
+<p>Predict the colour and earn real rewards instantly</p>
+
+<div class="bonus">
+🎁 Register Today & Get ₹100 Bonus
+</div>
+
+<br>
+
+<a href="https://shorturl.at/8ClIt" class="btn">Register Now</a>
+
+<br>
+
+<a href="https://t.me/tradetehejdjn" class="telegram-btn">
+📲 Join Telegram
+</a>
+
+</div>
+
+<div class="popup" id="winPopup">
+🎉 Rahul from Delhi won ₹8,500
+</div>
+
+<footer>
+© 2026 Colour Trading | All Rights Reserved
+</footer>
+
+<script>
+
+let players=["Aman","Rahul","Vikas","Sahil","Rohit","Arjun","Deepak"];
+let amounts=["₹500","₹1200","₹8500","₹3000","₹750","₹4200"];
+
+setInterval(()=>{
+
+let name=players[Math.floor(Math.random()*players.length)];
+let amount=amounts[Math.floor(Math.random()*amounts.length)];
+
+document.getElementById("winPopup").innerHTML=
+"🎉 "+name+" just won "+amount;
+
+},4000)
+
+</script>
+
+</body>
+</html>
